@@ -1,3 +1,8 @@
+> **Revisão 2026-11-27 (Conselho do TIME DE JOGOS) — veredito: NÃO FAZER AGORA (NO-GO de 2026-10-06 mantido, com 3 condições de reabertura).** Ata: [`conselho/2026-11-27-revisao-gdd.md`](conselho/2026-11-27-revisao-gdd.md); visão do portfólio: `JOGOS NOVOS/00_PESQUISA/CONSELHO_PORTFOLIO_2026-11-27.md`.
+> 1. Seria o **3º jogo de gestão** do estúdio, ao lado do Forge Street e do Little Terminal, os dois prontos e sem jogador.
+> 2. Os dois riscos que deram o NO-GO continuam abertos: o pipeline 2D por arquétipo não foi provado (o spike do §29 nunca rodou) e o tema pet com 13+ puxa as regras de Families e o ECA Digital.
+> 3. **Os 6 conflitos da seção de lições foram resolvidos** (§30.2). O desenho de coleção sem sorte paga (§28) fica como referência do portfólio.
+
 # GDD 04 — BEAST HAVEN
 ## Idle/Tycoon Hybrid com coleção de criaturas / Portrait / Android + iOS
 
@@ -665,3 +670,32 @@ O GDD já nasce nos guardrails: 1 moeda, offline de 2 h, sem interstitial na v0.
 6. Fazer 1 cuidador (lote de 65 créditos, com aval), com ferramentas por primitivas e os clipes reaproveitados da tabela acima.
 7. Montar o tutorial no `Tour.cs` com os 8 passos e o cartão da cuidadora, e fotografar cada passo em 540×960 antes do PR.
 8. Só então gravar os 8 criativos do build (`-record`) e rodar o teste de CPI do Gate 0.
+
+
+---
+
+# 30. REVISÃO DO CONSELHO E PLANO A PARTIR DE 2026-11-27
+
+## 30.1 Condições de reabertura (as três)
+
+1. **Gestão retém no nosso UA:** Forge Street ou Little Terminal com D1 ≥ 26% e D7 ≥ 5% numa coorte de ≥ 1,5 mil installs.
+2. **Pipeline provado:** o spike de 3 dias do §29 passa (≤ 1 dia-dev por espécie depois do rig-modelo; 30 FPS com 12 criaturas no aparelho de entrada), com resultado MEDIDO.
+3. **Leitura jurídica** do ECA Digital art. 20 e da política Families para um jogo de pet 13+ (item 5 das decisões do Vinicius no veredito).
+
+O spike (condição 2) pode rodar antes da 1, porque custa 3 dias e 0 crédito, mas só com o aval do Vinicius para abrir o projeto Unity.
+
+## 30.2 Conflitos da seção de lições, resolvidos
+
+| # | Conflito | Decisão |
+|---|---|---|
+| 1 | criativos antes de código | spike primeiro; criativos gravados do build do spike (`-record`); depois o teste de CPI |
+| 2 | "criaturas premium" (§7) × "nenhuma moeda compra espécie" (§6, §28) | "criaturas premium" riscado; só variante de cor cosmética de espécie já atraída pela receita |
+| 3 | criativo "rare creature reveal" (§16) | trocado por "qual habitat atrai a Raposa-lua?" (D1) |
+| 4 | Care Tokens e eventos de fim de semana | fora até a v0.2, nunca à venda, sem perda para quem faltar |
+| 5 | rig de quadrúpede "a verificar" (§29) | rota B existe (rig "Outro" do Tripo, como o dragão do DC: 65 créditos por espécie + 1 script por arquétipo); só entra se a rota A passar de 1,5 dia por espécie |
+| 6 | §23 cita o ARKANA, não o DC | a fonte de reuso é o DC (`render_sprites.py`, `Tour.cs`, `Art.cs`, `Setup.cs`, anúncios, IAP) e, para a simulação de gestão, o `TA.Core` do Little Terminal |
+
+## 30.3 O que este GDD dá ao resto do portfólio agora
+
+- **§28, coleção por receita com pista e testes negativos nomeados** (`Compra_NuncaConcedeEspecie`, `Rewarded_NaoMudaEspecie`): é o modelo do estúdio para qualquer coleção sem sorteio pago. O Mystic Kitchen e o Underground já citam essa regra.
+- **D3, "cuidado que automatiza e nunca pune"** (offline nunca baixa de "ok"): vale como invariante para o Little Terminal, onde equipe e avião têm desgaste.
